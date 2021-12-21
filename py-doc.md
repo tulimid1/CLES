@@ -1,29 +1,29 @@
 ---
 layout: page
 title: Python
-permalink: /Python/
+<!-- permalink: /Python/ -->
 ---
 
-# [function](https://function_link)
+# [function](https://github.com/tulimid1/CLES/blob/main/CLES/CLES.py)
 ---
 
-Description. See [function_main.ipynb](https://function_main.ipynb) for a notebook of given examples. 
+Description. See [Using_CLES.ipynb](https://github.com/tulimid1/CLES/blob/main/Using_CLES.ipynb) for a notebook of given examples. 
 
 ## Syntax
 ---
-    import module as m
+    import CLES as CL
 
-[outarg = m.function(inarg1, inarg2)](#a)
+[outarg = CL.function(inarg1, inarg2)](#a)
 
-[outarg = m.function(inarg1, inarg2, Name=Value)](#b)
+[outarg = CL.function(inarg1, inarg2, Name=Value)](#b)
 
 ## Description
 ---
 ### A
-[outarg](#outarg) = m.function([inarg1](#inarg1), [inarg2](#inarg2)) returns a ... . [example](#example-1)
+[thetaHat](#thetahat) = CL.function([inarg1](#inarg1), [inarg2](#inarg2)) returns a ... . [example](#example-1)
 
 ### B 
-[outarg](#outarg) = m.function([inarg1](#inarg1), [inarg2](#inarg2), [Name=Value](#name-value-arguments)) returns ... with additional options specified by one or more name-value pair arguments. For example, you can do this or that. [example](#example-2)
+[thetaHat](#thetahat) = CL.function([inarg1](#inarg1), [inarg2](#inarg2), [Name=Value](#name-value-arguments)) returns ... with additional options specified by one or more name-value pair arguments. For example, you can do this or that. [example](#example-2)
 
 ## Examples 
 ---
@@ -32,14 +32,14 @@ Description
 
     CODE
 
-![FIG1](/assets/fig1Py.png)
+thetaHat = 
 
 ### Example 2 
 Description
 
     CODE
     
-![FIG2](/assets/fig2Py.png)
+thetaHat = 
 
 ## Input Arguments
 ---
@@ -80,15 +80,19 @@ Data Types: (X, Y)
 ## Output
 ---
 
-### ```outarg```
-Short description
+### ```thetaHat```
+Effect size. 
 
-Long description 
+Common language effect size. This value will be between 50 andn 100. This value can be interpreted as the percentage or chance a value from one group is larger than a value from the other group. A [thetHat](#thetahat) of 50 would me groups are essentially from same distribution. A [thetaHat](#thetahat) of 100 would mean that 100 % of the data in one group is larger than the data in the other group. 
 
-Data Types: (X, Y)
+Data Types: (scalar, float, numeric)
 
 ## More About 
 ---
+
+[Lecture](https://github.com/joshcash9/Statistics_BME/blob/master/04_effect_power.pdf)
+
+I refrained from outputting size of effect (e.g., 'small', 'medium', 'large') because these are arbitrary and should be thought of as such. 
 
 ## Tips 
 ---
@@ -96,6 +100,6 @@ Data Types: (X, Y)
 ## Issues and Discussion 
 ---
 
-[Issues](https://github.com/tulimid1/TASK/issues) and [Discussion](https://github.com/tulimid1/TASK/discussions).
+[Issues](https://github.com/tulimid1/CLES/issues) and [Discussion](https://github.com/tulimid1/CLES/discussions).
 
 If you don't know how to use github (or don't want to), just send me an [email](mailto:tulimid@udel.edu). 
