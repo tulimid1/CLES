@@ -3,78 +3,49 @@ layout: page
 title: Python
 ---
 
-# [function](https://github.com/tulimid1/CLES/blob/main/CLES/CLES.py)
+# [CLES_2paired](https://github.com/tulimid1/CLES/blob/main/CLES/CLES.py)
 ---
 
-Description. See [Using_CLES.ipynb](https://github.com/tulimid1/CLES/blob/main/Using_CLES.ipynb) for a notebook of given examples. 
+Calculate common language effect size for 2 paired samples. See [Using_CLES.ipynb](https://github.com/tulimid1/CLES/blob/main/Using_CLES.ipynb) for a notebook of given examples. 
 
 ## Syntax
 ---
     import CLES as CL
 
-[outarg = CL.function(inarg1, inarg2)](#a)
-
-[outarg = CL.function(inarg1, inarg2, Name=Value)](#b)
+[thetaHat = CL.CLES_2paired(data1, data2)](#a)
 
 ## Description
 ---
 ### A
-[thetaHat](#thetahat) = CL.function([inarg1](#inarg1), [inarg2](#inarg2)) returns a ... . [example](#example-1)
-
-### B 
-[thetaHat](#thetahat) = CL.function([inarg1](#inarg1), [inarg2](#inarg2), [Name=Value](#name-value-arguments)) returns ... with additional options specified by one or more name-value pair arguments. For example, you can do this or that. [example](#example-2)
+[thetaHat](#thetahat) = CL.CLES_2paired([data1](#data1), [data2](#data2)) returns common language effect size for 2 paired samples. [example](#example-1)
 
 ## Examples 
 ---
 ### Example 1
-Description 
+Generate some data and calculate common language effect size. 
 
-    CODE
+    mu = np.array([3, 5])
+    sigma = np.array([[1, 0.6], [0.6, 3]])
+    data = np.random.multivariate_normal(mu, sigma, (100,))
+    CL.CLES_2paired(data[:,0], data[:,1])
 
-thetaHat = 
-
-### Example 2 
-Description
-
-    CODE
-    
-thetaHat = 
+thetaHat = 91.08
 
 ## Input Arguments
 ---
-### ```inarg1```
-Short description
+### ```data1```
+Data vector 1. 
 
-Long description
+Vector of data from group 1. 
 
-Data Types: (X, Y)
+Data Types: (vector, numeric)
 
-### ```inarg2```
-Short description
+### ```data2```
+Data vector 2. 
 
-Long description
+Vector of data from group 2. 
 
-Data Types: (X, Y)
-
-### Name-Value Arguments
-
-Specified optional pairs of ```Name=Value``` arguments. ```Name``` is the is the argument name and ```Value``` is the corresponding value. You can specify several name and value pair arguments in any order as ```Name1=Value1,...,NameN=ValueN```. 
-
-**Example**: ```name1=value1, name2=value2``` specifies blah blah blah . 
-
-### ```name1```
-Short description (default=X)
-
-Long description
-
-Data Types: (X, Y)
-
-### ```name2```
-Short description (default=X)
-
-Long description
-
-Data Types: (X, Y)
+Data Types: (vector, numeric)
 
 ## Output
 ---
