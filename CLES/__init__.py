@@ -1,1 +1,1 @@
-from CLES.CLES import CLES_2paired, CLES_2independent
+from CLES.CLES import CLES_2paired, CLES_2independent, CLES_1samp
