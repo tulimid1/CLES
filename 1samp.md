@@ -3,78 +3,66 @@ layout: page
 title: Python
 ---
 
-# [function](https://github.com/tulimid1/CLES/blob/main/CLES/CLES.py)
+# [CLES_1samp](https://github.com/tulimid1/CLES/blob/main/CLES/CLES.py)
 ---
 
-Description. See [Using_CLES.ipynb](https://github.com/tulimid1/CLES/blob/main/Using_CLES.ipynb) for a notebook of given examples. 
+Calculate common language effect size for 1 sample. See [Using_CLES.ipynb](https://github.com/tulimid1/CLES/blob/main/Using_CLES.ipynb) for a notebook of given examples. 
 
 ## Syntax
 ---
     import CLES as CL
 
-[outarg = CL.function(inarg1, inarg2)](#a)
+[thetaHat = CL.CLES_1samp(data)](#a)
 
-[outarg = CL.function(inarg1, inarg2, Name=Value)](#b)
+[thetaHat = CL.CLES_1samp(data, Name=Value)](#b)
 
 ## Description
 ---
 ### A
-[thetaHat](#thetahat) = CL.function([inarg1](#inarg1), [inarg2](#inarg2)) returns a ... . [example](#example-1)
+[thetaHat](#thetahat) = CL.CLES_1samp([data](#data)) returns common language effect size for 1 sample comparing mean to 0. [example](#example-1)
 
 ### B 
-[thetaHat](#thetahat) = CL.function([inarg1](#inarg1), [inarg2](#inarg2), [Name=Value](#name-value-arguments)) returns ... with additional options specified by one or more name-value pair arguments. For example, you can do this or that. [example](#example-2)
+[thetaHat](#thetahat) = CL.CLES_1samp([data](#data), [Name=Value](#name-value-arguments)) returns common language effect size for 1 sample with additional options specified by one or more name-value pair arguments. For example, you can compare to a mean of 15. [example](#example-2)
 
 ## Examples 
 ---
 ### Example 1
-Description 
+Generate some data and calculate the common language effect size.  
 
-    CODE
+    group2 = np.random.normal(5,3, (100,))
+    CL.CLES_1samp(group2)
 
-thetaHat = 
+thetaHat = 95.0
 
 ### Example 2 
-Description
+Generate some data and calculate the common language effect size against a mean of 4. 
 
-    CODE
+    group2 = np.random.normal(5,3, (100,))
+    CL.CLES_1samp(group2, mu=4)
     
-thetaHat = 
+thetaHat = 55.00
 
 ## Input Arguments
 ---
-### ```inarg1```
-Short description
+### ```data```
+Data vector. 
 
-Long description
+Vector of data to find common language effect size against. 
 
-Data Types: (X, Y)
-
-### ```inarg2```
-Short description
-
-Long description
-
-Data Types: (X, Y)
+Data Types: (vector, numeric)
 
 ### Name-Value Arguments
 
 Specified optional pairs of ```Name=Value``` arguments. ```Name``` is the is the argument name and ```Value``` is the corresponding value. You can specify several name and value pair arguments in any order as ```Name1=Value1,...,NameN=ValueN```. 
 
-**Example**: ```name1=value1, name2=value2``` specifies blah blah blah . 
+**Example**: ```mu=15``` specifies a comparison against a mean of 15. 
 
-### ```name1```
-Short description (default=X)
+### ```mu```
+Mean for comparison (default=0)
 
-Long description
+Mean to compare [data](#data) vector against. 
 
-Data Types: (X, Y)
-
-### ```name2```
-Short description (default=X)
-
-Long description
-
-Data Types: (X, Y)
+Data Types: (scalar, float)
 
 ## Output
 ---
