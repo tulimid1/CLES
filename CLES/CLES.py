@@ -30,7 +30,7 @@ def CLES_2paired(data1, data2):
     thetaHat: common language effect size (50 - 100)
     '''
     import numpy 
-    D = data1 - data2
+    D = data2 - data1
     comp = numpy.zeros((len(D)-1))
     total = 0
     for d1 in D:
