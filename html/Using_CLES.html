@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><meta name="generator" content="MATLAB 2020b"><title>Using CLES</title><style type="text/css">.rtcContent { padding: 30px; } .S0 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 28.8px; min-height: 0px; white-space: pre-wrap; color: rgb(213, 80, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 24px; font-weight: 400; text-align: left;  }
+.S1 { margin-bottom: 20px; padding-bottom: 4px;  }
+.S2 { margin: 0px; padding: 10px 0px 10px 5px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: 700; text-align: start;  }
+.S3 { margin: -1px 0px 0px; padding: 10px 0px 10px 7px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: 400; text-align: start;  }
+.CodeBlock { background-color: #F7F7F7; margin: 10px 0 10px 0;}
+.S4 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 0px none rgb(0, 0, 0); border-radius: 4px 4px 0px 0px; padding: 6px 45px 0px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S5 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px 0px 4px 4px; padding: 0px 45px 4px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S6 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 20px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 20px; font-weight: 700; text-align: left;  }
+.S7 { margin: 15px 10px 5px 4px; padding: 0px; line-height: 18px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 17px; font-weight: 700; text-align: left;  }
+.S8 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 0px none rgb(0, 0, 0); border-radius: 0px; padding: 0px 45px 0px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S9 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 4px 4px 0px 0px; padding: 6px 45px 4px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S10 { color: rgb(64, 64, 64); padding: 10px 0px 6px 17px; background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box; font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px; overflow-x: hidden; line-height: 17.234px;  }</style></head><body><div class = rtcContent><h1  class = 'S0' id = 'T_B78F5ECB' ><span>Using CLES</span></h1><div  class = 'S1'><div  class = 'S2'><span style=' font-weight: bold;'>Table of Contents</span></div><div  class = 'S3'><a href = "#H_9D45835E"><span>Very different data
+</span></a><span>    </span><a href = "#H_4BADEA10"><span>Simulate some data and create instance of object
+</span></a><span>    </span><a href = "#H_5C981714"><span>Two independent samples
+</span></a><span>    </span><a href = "#H_8FC50011"><span>Two paired samples
+</span></a><span>    </span><a href = "#H_A715B410"><span>One sample
+</span></a><a href = "#H_C80D0763"><span>Very similar data
+</span></a><span>    </span><a href = "#H_84F41EC5"><span>Simulate some data and create instance of object
+</span></a><span>    </span><a href = "#H_5B5A8EB8"><span>Two independent samples
+</span></a><span>    </span><a href = "#H_897CFD8F"><span>Two paired samples
+</span></a><span>    </span><a href = "#H_C407EB50"><span>One sample</span></a></div></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre;"><span>clear; clc;</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span>cd(</span><span style="color: rgb(0, 204, 0);">'/Users/duncan/Documents/GitHub/CLES'</span><span>);</span></span></div></div></div><h2  class = 'S6' id = 'H_9D45835E' ><span>Very different data</span></h2><h3  class = 'S7' id = 'H_4BADEA10' ><span>Simulate some data and create instance of object</span></h3><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre;"><span>A = normrnd(5, 3, [100,1]);</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>B = normrnd(0, 1, [100,1]);</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span>CL = CLES; </span></span></div></div></div><h3  class = 'S7' id = 'H_5C981714' ><span>Two independent samples</span></h3><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S9'><span style="white-space: pre;"><span class="warning_squiggle_rte2059147317">theta</span><span> = CL.two_independent(A, B)</span></span></div><div  class = 'S10'><div class='variableElement' style='font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px; '>theta = 94.6400</div></div></div></div><h3  class = 'S7' id = 'H_8FC50011' ><span>Two paired samples</span></h3><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S9'><span style="white-space: pre;"><span class="warning_squiggle_rte2059147317">theta</span><span> = CL.two_paired(A, B)</span></span></div><div  class = 'S10'><div class='variableElement' style='font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px; '>theta = 95</div></div></div></div><h3  class = 'S7' id = 'H_A715B410' ><span>One sample</span></h3><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S9'><span style="white-space: pre;"><span class="warning_squiggle_rte2059147317">theta</span><span> = CL.one_sample(A, 3)</span></span></div><div  class = 'S10'><div class='variableElement' style='font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px; '>theta = 95</div></div></div></div><h2  class = 'S6' id = 'H_C80D0763' ><span>Very similar data</span></h2><h3  class = 'S7' id = 'H_84F41EC5' ><span>Simulate some data and create instance of object</span></h3><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre;"><span>A = normrnd(0, 1, [100,1]);</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>B = normrnd(0, 1, [100,1]);</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span>CL = CLES; </span></span></div></div></div><h3  class = 'S7' id = 'H_5B5A8EB8' ><span>Two independent samples</span></h3><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S9'><span style="white-space: pre;"><span class="warning_squiggle_rte2059147317">theta</span><span> = CL.two_independent(A, B)</span></span></div><div  class = 'S10'><div class='variableElement' style='font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px; '>theta = 51.3000</div></div></div></div><h3  class = 'S7' id = 'H_897CFD8F' ><span>Two paired samples</span></h3><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S9'><span style="white-space: pre;"><span class="warning_squiggle_rte2059147317">theta</span><span> = CL.two_paired(A, B)</span></span></div><div  class = 'S10'><div class='variableElement' style='font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px; '>theta = 58.0000</div></div></div></div><h3  class = 'S7' id = 'H_C407EB50' ><span>One sample</span></h3><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S9'><span style="white-space: pre;"><span>theta = CL.one_sample(A, 0)</span></span></div><div  class = 'S10'><div class='variableElement' style='font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px; '>theta = 55.0000</div></div></div></div></div>
+<br>
+<!-- 
+##### SOURCE BEGIN #####
+%% Using CLES
+
+clear; clc;
+cd('/Users/duncan/Documents/GitHub/CLES');
+%% Very different data
+% Simulate some data and create instance of object
+
+A = normrnd(5, 3, [100,1]);
+B = normrnd(0, 1, [100,1]);
+CL = CLES; 
+% Two independent samples
+
+theta = CL.two_independent(A, B)
+% Two paired samples
+
+theta = CL.two_paired(A, B)
+% One sample
+
+theta = CL.one_sample(A, 3)
+%% Very similar data
+% Simulate some data and create instance of object
+
+A = normrnd(0, 1, [100,1]);
+B = normrnd(0, 1, [100,1]);
+CL = CLES; 
+% Two independent samples
+
+theta = CL.two_independent(A, B)
+% Two paired samples
+
+theta = CL.two_paired(A, B)
+% One sample
+
+theta = CL.one_sample(A, 0)
+##### SOURCE END #####
+--></body></html>
