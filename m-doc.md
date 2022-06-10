@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Python
-permalink: /Python/
+title: MATLAB
+permalink: /MATLAB/
 ---
 
 ## Installation 
