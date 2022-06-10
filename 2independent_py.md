@@ -17,12 +17,12 @@ Calculate common language effect size for 2 independent samples. See [Using_CLES
 ## Description
 ---
 ### A
-[thetaHat](#thetahat) = CL.CLES_2independent([data1](#data1), [data2](#data2)) returns common language effect size for 2 independent samples. [example](#example-1)
+[thetaHat](#thetahat) = CL.CLES_2independent([data1](#data1), [data2](#data2)) returns common language effect size for 2 independent samples ([data1](#data1) and [data2](#data2)). [example](#example-1)
 
 ## Examples 
 ---
 ### Example 1
-generate some random data and find common language effect size. 
+Generate some random data and find common language effect size. 
 
     group1 = np.random.normal(0, 1, (100,))
     group2 = np.random.normal(5,3, (100,))
@@ -52,7 +52,7 @@ Data Types: (vector, numeric)
 ### ```thetaHat```
 Effect size. 
 
-Common language effect size. This value will be between 50 andn 100. This value can be interpreted as the percentage or chance a value from one group is larger than a value from the other group. A [thetHat](#thetahat) of 50 would me groups are essentially from same distribution. A [thetaHat](#thetahat) of 100 would mean that 100 % of the data in one group is larger than the data in the other group. 
+Common language effect size. This value will be between 50 andn 100. This value can be interpreted as the percentage or chance a value from one group is larger than a value from the other group. A [thetHat](#thetahat) of 50 would me groups are essentially from same distribution. A [thetaHat](#thetahat) of 100 would mean that 100% of the data in one group is larger than the data in the other group. 
 
 Data Types: (scalar, float, numeric)
 

@@ -6,13 +6,13 @@ permalink: /Python/
 
 ## Installation 
 
-     pip install CLES
+     [MATLAB File Exchange](https://www.mathworks.com/matlabcentral/fileexchange/113020-cles)
      
 ## Functions
 
-* [CLES_2independent](/2independent_py.md)
-* [CLES_2paired](/2paired_py.md) 
-* [CLES_1samp](/1samp_py.md)
+* [CLES_2independent](/2independent_m.md)
+* [CLES_2paired](/2paired_m.md) 
+* [CLES_1samp](/1samp_m.md)
 
 --- 
 

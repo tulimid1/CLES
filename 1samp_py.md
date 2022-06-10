@@ -70,7 +70,7 @@ Data Types: (scalar, float)
 ### ```thetaHat```
 Effect size. 
 
-Common language effect size. This value will be between 50 andn 100. This value can be interpreted as the percentage or chance a value from one group is larger than a value from the other group. A [thetHat](#thetahat) of 50 would me groups are essentially from same distribution. A [thetaHat](#thetahat) of 100 would mean that 100 % of the data in one group is larger than the data in the other group. 
+Common language effect size. This value will be between 50 andn 100. This value can be interpreted as the percentage or chance a value from one group is larger than a value from the other group. A [thetHat](#thetahat) of 50 would me groups are essentially from same distribution. A [thetaHat](#thetahat) of 100 would mean that 100% of the data in one group is larger than the data in the other group. 
 
 Data Types: (scalar, float, numeric)
 
