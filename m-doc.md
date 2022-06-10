@@ -6,7 +6,7 @@ permalink: /MATLAB/
 
 ## Installation 
 
-     [MATLAB File Exchange](https://www.mathworks.com/matlabcentral/fileexchange/113020-cles)
+[MATLAB File Exchange](https://www.mathworks.com/matlabcentral/fileexchange/113020-cles)
      
 ## Functions
 
