@@ -14,7 +14,7 @@ classdef CLES
     
 %% Methods 
     %% Main 
-    methods
+    methods (Static)
         function obj = CLES()
             % create instance for methods
         end
